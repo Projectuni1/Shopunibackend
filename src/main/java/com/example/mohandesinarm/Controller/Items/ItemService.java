@@ -4,6 +4,7 @@ import com.example.mohandesinarm.Controller.Items.Models.*;
 import com.example.mohandesinarm.DBEntity.ItemEntity;
 import com.example.mohandesinarm.Repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ItemService {
 
-    private ItemRepository repository;
+
+    @Autowired private ItemRepository repository;
 
     public addItemResponse addItem(addItemRequest request){
 

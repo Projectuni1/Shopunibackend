@@ -30,6 +30,7 @@ public class SecurityConfiguration {
 //                    .disable()
                     .authorizeHttpRequests(auth -> auth
                             .requestMatchers("/api/v1/auth/**").permitAll()
+                            .requestMatchers("/api/v1/demo-controller/**").permitAll()
                             .anyRequest().authenticated())
 //                    .requestMatchers("/api/v1/auth/**")
 //                    .permitAll()
